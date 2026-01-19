@@ -33,7 +33,12 @@ h1, h2, h3 {
     line-height: 1.3;
     font-family: "TrajanProBold", "Times New Roman", serif;
 }
-
+h2{
+    font-size: 1.8em;
+}
+h3{
+    font-size: 1.5em;
+}
 /* TABLES */
 
 table {
