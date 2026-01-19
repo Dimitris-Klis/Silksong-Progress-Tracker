@@ -1,0 +1,261 @@
+@font-face {
+    font-family: "TrajanProBold";      /* Name you’ll use in CSS */
+    src: url("Fonts/trajanpro_bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+td {
+    vertical-align: top;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfd3dc;              /* soft light gray */
+    background-color: #0d1117;   /* near-black, not pure black */
+    margin: 0;
+    padding: 24px;
+    padding-top: 60px;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+h1, h2, h3 {
+    color: #e6e8ee;              /* slightly brighter than body */
+    line-height: 1.3;
+    font-family: "TrajanProBold", "Times New Roman", serif;
+}
+
+/* TABLES */
+
+table {
+    width: 100%;
+    border-collapse: separate;   /* key change */
+    border-spacing: 0;
+    margin: 1.5em 0;
+    background-color: #121826;
+    font-size: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header */
+thead th {
+    background-color: #161c2e;
+    font-weight: 600;
+    color: #e9ecf1;
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #1f2638;
+}
+
+/* Cells */
+th,
+td {
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: middle;
+    color: #cfd3dc;
+    border-bottom: 1px solid #1f2638;
+}
+
+/* Remove row striping */
+tbody tr {
+    background: transparent;
+}
+
+/* Cell-based hover (rowspan-safe) */
+/* Hover only non-rowspan cells */
+tbody tr:hover td:not([rowspan]) {
+    background-color: #1a2136;
+}
+
+/* Make rowspan cells feel intentional */
+td[rowspan] {
+    background-color: #141a2b;
+    font-weight: 500;
+}
+
+/* Optional: vertical column separators */
+th + th,
+td + td {
+    border-left: 1px solid #1f2638;
+}
+
+/* Clean bottom edge */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 8px;
+    font-size: 13px;
+    color: #9aa3b2;
+}
+.money{
+    width: 20px;
+}
+.icon{
+    width: 40px;
+}
+.money, .icon{
+    vertical-align: middle;
+}
+tr.completed {
+    opacity: 0.45;
+}
+#reset-btn {
+    background-color: #1f2536;
+    color: #cfd3dc;
+    border: 1px solid #2a3045;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#reset-btn:hover {
+    background-color: #272d44;
+}
+
+.center{
+    text-align: center;
+}
+.image-legend {
+    display: inline-block;       /* so it wraps tightly around image */
+    text-align: center;          /* centers caption below image */
+    margin: 20px;                /* spacing around figure */
+}
+
+.image-legend img {
+    max-width: 100%;             /* responsive image */
+    height: auto;
+    display: block;              /* ensures proper centering */
+    margin: 0 auto;              /* centers image horizontally */
+}
+
+.image-legend figcaption {
+    margin-top: 8px;             /* space between image and caption */
+    font-size: 0.9em;
+}
+#total {
+    font-weight: 600;
+    color: #e6e8ee;
+    margin-left: 8px;
+}
+#floating-total {
+    font-weight: 600;
+    font-size: 16px;
+}
+#floating-panel {
+    position: fixed;      /* stays on screen */
+    top: 84px;            /* distance from top */
+    right: 24px;          /* distance from right */
+    background-color: #151821;
+    color: #e6e8ee;
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column; /* stack total + button */
+    gap: 10px;
+    min-width: 150px;
+}
+.dashed-top td:not([rowspan]) {
+    border-top: 2px dashed #333e59;
+}
+.dashed{
+    border: solid dashed 1px #333e59;
+}
+
+/*Navbar*/
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: rgba(15, 17, 23, 0.92); /* slightly translucent */
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #1f2638;
+}
+
+.navbar-inner {
+  width: 100%;
+  padding: 14px 16px;          /* ← this controls distance from screen edge */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 16px;
+  font-family: TrajanProBold;
+  color: #e6e8ee;
+  letter-spacing: 0.2px;
+}
+
+.nav-right a {
+  color: #cfd3dc;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-right a:hover {
+  color: #8ab4f8;
+}
+
+.nav-right a.active {
+  color: #8ab4f8;
+  border-bottom-color: #8ab4f8;
+}
+body {
+  padding-top: 8px;
+}
+h1 {
+  scroll-margin-top: 68px; /* adjust to navbar height */
+}
+
+/*Links*/
+/* Default link style */
+a {
+    color: #8ab4f8;          /* calm accent */
+    text-decoration: none;
+    transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+/* Hover */
+a:hover {
+    color: #a3c5ff;          /* slightly brighter on hover */
+    text-decoration: underline;
+}
+
+/* Active / pressed */
+a:active {
+    color: #5e7dbf;          /* darker for click feedback */
+}
+
+/* Focus for keyboard accessibility */
+a:focus-visible {
+    outline: 2px dashed #8ab4f8;
+    outline-offset: 2px;
+}
