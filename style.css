@@ -136,6 +136,11 @@ tr.completed {
 .center{
     text-align: center;
 }
+.center-img{
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+}
 .image-legend {
     display: inline-block;       /* so it wraps tightly around image */
     text-align: center;          /* centers caption below image */
